@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog::backdrop {
+            background-color: rgb(0 0 0 / .5);
+        }
+        dialog {
+          border: none;
+          border-radius: .5rem;
+          box-shadow: 0 0 3em rgb(0 0 0 / .3);
+          width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Abrir Modal</button>
+    
+    <dialog>
+
+        <h2>Title</h2>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vel minus doloribus consequatur, et aperiam accusamus a accusantium fuga error! Similique, ipsa magni. Modi amet veritatis illo eaque officia id!
+        </p>
+       
+        <button>Fechar Modal</button>
+
+     <dialog>
+ 
+
+
+        <script>
+            const button = window.document.querySelector("button")
+            const modal = document.querySelector("dialog")
+            const buttonClose = document.querySelector("dialog button")
+
+            button.onclick = function() {
+                modal.show() 
+            //    modal.showModal() com o showModal você fecha o modal com a tecla Esc.
+            }
+
+            buttonClose.onclick = function() {
+                modal.close()
+            }
+        </script>
+</body>
+</html>
